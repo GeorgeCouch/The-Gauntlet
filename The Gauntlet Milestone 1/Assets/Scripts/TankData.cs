@@ -7,6 +7,7 @@ public class TankData : MonoBehaviour
     //Variables for parts of our tank
     public TankMover mover;
     public TankShooter shooter;
+    public GameManager gameManager;
     // Variables for our tank in game
     public float forwardSpeed;
     public float backwardSpeed;
@@ -24,6 +25,8 @@ public class TankData : MonoBehaviour
         mover = this.gameObject.GetComponent<TankMover>();
         // Load the shooter
         shooter = this.gameObject.GetComponent<TankShooter>();
+        // Load GameManager
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -33,6 +36,11 @@ public class TankData : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void OnDestroy()
+    {
+        gameManager.Increment();
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -16,13 +16,13 @@ public class InputController : Controller
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            myObjectData.shooter.Shoot();
-        }
-
         if (controls == ControlType.WASD)
         {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                myObjectData.shooter.Shoot();
+            }
+
             if (Input.GetKey(KeyCode.W))
             {
                 // TODO: Move forward!
@@ -49,6 +49,11 @@ public class InputController : Controller
         {
             if (controls == ControlType.IJKL)
             {
+                if (Input.GetKeyDown(KeyCode.P))
+                {
+                    myObjectData.shooter.Shoot();
+                }
+
                 if (Input.GetKey(KeyCode.I))
                 {
                     // TODO: Move forward!
