@@ -21,6 +21,7 @@ public class TankMover : MonoBehaviour
         
     }
 
+    // Move Forward and Backward at MPS
     public void MoveForward()
     {
         rb.MovePosition(rb.position + (transform.forward * data.forwardSpeed * Time.deltaTime));
@@ -31,6 +32,7 @@ public class TankMover : MonoBehaviour
         rb.MovePosition(rb.position - (transform.forward * data.backwardSpeed * Time.deltaTime));
     }
 
+    // Rotate right and left at degrees per second
     public void RotateRight()
     {
         transform.Rotate(0, -data.turnSpeed * Time.deltaTime, 0);
@@ -39,5 +41,10 @@ public class TankMover : MonoBehaviour
     public void RotateLeft()
     {
         transform.Rotate(0, data.turnSpeed * Time.deltaTime, 0);
+    }
+
+    public void Spin()
+    {
+        transform.Rotate(0, 180, 0);
     }
 }

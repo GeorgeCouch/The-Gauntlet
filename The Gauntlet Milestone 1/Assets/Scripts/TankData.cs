@@ -38,11 +38,13 @@ public class TankData : MonoBehaviour
         }
     }
 
+    // Call GameManager Increment if a tank is Destroyed
     private void OnDestroy()
     {
         gameManager.Increment();
     }
 
+    // Take Damage if collide with a bullet
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Bullet")

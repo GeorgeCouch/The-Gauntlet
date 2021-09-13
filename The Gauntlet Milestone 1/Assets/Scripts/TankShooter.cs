@@ -11,6 +11,7 @@ public class TankShooter : MonoBehaviour
     void Start()
     {
         data = this.gameObject.GetComponent<TankData>();
+        // Set canShoot to true
         canShoot = true;
     }
 
@@ -19,6 +20,7 @@ public class TankShooter : MonoBehaviour
     {
     }
 
+    // Shoot if canShoot is true. Wait for specified time by designers before being able to shoot again
     public void Shoot()
     {
         if (canShoot)

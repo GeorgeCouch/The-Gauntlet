@@ -16,6 +16,18 @@ public class InputController : Controller
     // Update is called once per frame
     void Update()
     {
+        // Quit game if ESC is pressed
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            myObjectData.mover.Spin();
+        }
+        
+        // Controls for WASD Space
         if (controls == ControlType.WASD)
         {
             if (Input.GetKeyDown(KeyCode.Space))
@@ -25,7 +37,6 @@ public class InputController : Controller
 
             if (Input.GetKey(KeyCode.W))
             {
-                // TODO: Move forward!
                 myObjectData.mover.MoveForward();
             }
 
@@ -43,10 +54,9 @@ public class InputController : Controller
             {
                 myObjectData.mover.RotateLeft();
             }
-
-            // TODO: All other Directions
         } else
         {
+            // Controlls for IJKL P
             if (controls == ControlType.IJKL)
             {
                 if (Input.GetKeyDown(KeyCode.P))

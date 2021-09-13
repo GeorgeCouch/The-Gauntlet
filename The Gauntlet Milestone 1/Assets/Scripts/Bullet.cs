@@ -16,6 +16,7 @@ public class Bullet : MonoBehaviour
         
     }
 
+    // Destroy Bullet if it collides with anything
     private void OnCollisionEnter(Collision collision)
     {
         Destroy(gameObject);
