@@ -1,2 +1,2 @@
 # The Gauntlet
- GPE205 Milestone 1
+Simple Tank game where two people can fight and destroy AI.
