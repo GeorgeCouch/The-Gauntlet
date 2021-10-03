@@ -17,6 +17,7 @@ public class TankData : MonoBehaviour
     public float ShootDelay;
     public float MaxHealth;
     public float BulletDamage;
+    public float CurrentMaxHealth;
 
     // Start is called before the first frame update
     void Start()

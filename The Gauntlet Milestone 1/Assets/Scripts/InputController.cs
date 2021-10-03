@@ -10,7 +10,8 @@ public class InputController : Controller
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Add myself to the list of players
+        GameManager.instance.players.Add(this);
     }
 
     // Update is called once per frame
@@ -86,5 +87,11 @@ public class InputController : Controller
                 }
             }
         }
+    }
+
+    public void OnDestroy()
+    {
+        // Remove me from the list
+        GameManager.instance.players.Remove(this);
     }
 }

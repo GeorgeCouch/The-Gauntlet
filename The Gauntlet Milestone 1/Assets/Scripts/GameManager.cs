@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     // Array of tank data and tanks
     public TankData[] tanks;
     public GameObject[] gameObjects;
+    public List<InputController> players;
 
     // Make singleton
     private void Awake()
