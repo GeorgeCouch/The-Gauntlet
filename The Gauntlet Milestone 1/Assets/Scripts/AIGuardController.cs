@@ -7,6 +7,11 @@ public class AIGuardController : AIController
     // Update is called once per frame
     void Update()
     {
+        // Only Turn towards player and shoot
+        if (currentState == AIStates.TurnAndShootStatic)
+        {
+            DoTurnAndShoot();
+        }
         // Can See Test
         if (currentState == AIStates.CanSeeLog)
         {

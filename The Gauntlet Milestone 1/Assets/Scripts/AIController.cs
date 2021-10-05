@@ -5,7 +5,7 @@ using UnityEngine;
 public class AIController : Controller
 {
     //My FSM states
-    public enum AIStates { Idle, Chase, TurnAndShoot, ChaseAndShoot, Flee, Patrol, PatrolStatic, FleeStatic, IdleFlee, ChaseStatic, IdleChase, CanSeeLog };
+    public enum AIStates { Idle, Chase, TurnAndShoot, ChaseAndShoot, Flee, Patrol, PatrolStatic, FleeStatic, IdleFlee, ChaseStatic, IdleChase, CanSeeLog, TurnAndShootStatic };
     public AIStates currentState;
     // Aditional variables for decision making
     // howFarIsClose will work for hearing

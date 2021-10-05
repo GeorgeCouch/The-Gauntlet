@@ -17,11 +17,12 @@ public class NextScene : MonoBehaviour
         
     }
 
+    // Moves to next scene after collision with player
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("woked");
+            //Debug.Log("woked");
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
