@@ -1,0 +1,7 @@
+Patrol Static - Follows a patrol path and nothing else
+
+Idle Flee - Flees from player and avoids obstacles
+
+Idle Chase - Chases player and avoids obstacles
+
+Patrol - Follows a patrol path. If hear or see player, either chase or flee depending on how much health tank has. If chasing, stop and shoot if can see and hear player. 
