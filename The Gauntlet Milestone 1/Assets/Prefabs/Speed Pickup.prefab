@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 693258039958697072}
   - component: {fileID: 4828876005943336736}
   - component: {fileID: 7555964423377161347}
+  - component: {fileID: 8580001991822371538}
   m_Layer: 0
   m_Name: Speed Pickup
   m_TagString: Untagged
@@ -97,6 +98,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &8580001991822371538
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4098314637974819330}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d89a833675d6dc349b3f92b7bc7add8a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4708470282801012243
 GameObject:
   m_ObjectHideFlags: 0

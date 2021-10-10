@@ -205,9 +205,9 @@ MonoBehaviour:
   - {fileID: 8625634938969015713, guid: a88a62bcc9ae76449994e49440214230, type: 3}
   - {fileID: 1188854342426733453, guid: 04c091aea423807478c3043aca41eb3d, type: 3}
   - {fileID: 2587254495856026612, guid: d02fff96f8e56454b9539b6a2fdf9e1d, type: 3}
-  mapSeed: 150
+  mapSeed: 0
   isMapOfTheDay: 0
-  isRandomSeed: 0
+  isRandomSeed: 1
   mapChoice: 0
 --- !u!4 &113571782
 Transform:

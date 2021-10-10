@@ -1585,8 +1585,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6b1c372f60c5da4b91370c30c101197, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player1Lives: 2
+  Player2Lives: 3
   Player1Score: 0
   Player2Score: 0
+  HighScore: 0
   tanks:
   - {fileID: 1972559929}
   - {fileID: 2146115937}
@@ -1608,6 +1611,9 @@ MonoBehaviour:
   PlayerSpawners: []
   PlayerTank: {fileID: 0}
   SpawnedPlayer: {fileID: 0}
+  player2Tank: {fileID: 0}
+  SpawnedPlayer2: {fileID: 0}
+  multiplayerChoice: 0
 --- !u!4 &1200702840
 Transform:
   m_ObjectHideFlags: 0
@@ -2665,6 +2671,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 97453509896137413, guid: d66573f20ec5b9c489b5d61d8a3ea8de, type: 3}
+      propertyPath: currentState
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 97453509896137413, guid: d66573f20ec5b9c489b5d61d8a3ea8de, type: 3}
+      propertyPath: wayPoints.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 97453509896137413, guid: d66573f20ec5b9c489b5d61d8a3ea8de, type: 3}
       propertyPath: wayPoints.Array.data[0]
       value: 
