@@ -257,4 +257,9 @@ public class AIController : Controller
             return false;
         }
     }
+
+    private void OnDestroy()
+    {
+        
+    }
 }

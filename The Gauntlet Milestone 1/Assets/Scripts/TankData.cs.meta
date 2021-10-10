@@ -3,7 +3,11 @@ guid: ce5fa631fff033d4ea323227ced54e79
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - TankDestroy: {fileID: 8300000, guid: 1d7c8dc7e5575754295f3faa52e1c532, type: 3}
+  - mover: {instanceID: 0}
+  - shooter: {instanceID: 0}
+  - gameManager: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

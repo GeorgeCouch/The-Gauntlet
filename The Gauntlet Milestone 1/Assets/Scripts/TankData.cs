@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TankData : MonoBehaviour
 {
+    public AudioClip TankDestroy;
+    public float TankDestroyVol;
     //Variables for parts of our tank
     public TankMover mover;
     public TankShooter shooter;
@@ -22,6 +24,7 @@ public class TankData : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ConvertPrefs();
         // Load the mover
         mover = this.gameObject.GetComponent<TankMover>();
         // Load the shooter
@@ -35,6 +38,7 @@ public class TankData : MonoBehaviour
     {
         if (MaxHealth <= 0)
         {
+            AudioSource.PlayClipAtPoint(TankDestroy, gameObject.GetComponent<Transform>().position, TankDestroyVol);
             Destroy(gameObject);
         }
     }
@@ -52,6 +56,12 @@ public class TankData : MonoBehaviour
         {
             MaxHealth -= BulletDamage;
         }
+    }
+
+    public void ConvertPrefs()
+    {
+        TankDestroyVol = PlayerPrefs.GetInt("SFX Volume");
+        TankDestroyVol /= 10;
     }
 }
 

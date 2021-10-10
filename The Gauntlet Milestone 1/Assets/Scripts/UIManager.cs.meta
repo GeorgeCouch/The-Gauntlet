@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 36644b8658175094b8090b53d87998f4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - buttonClip: {fileID: 8300000, guid: 1d7c8dc7e5575754295f3faa52e1c532, type: 3}
+  - SFXDisplay: {instanceID: 0}
+  - MusicDisplay: {instanceID: 0}
+  - MultiplayerDisplay: {instanceID: 0}
+  - MapDisplay: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

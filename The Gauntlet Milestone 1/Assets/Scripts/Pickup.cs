@@ -6,6 +6,7 @@ public class Pickup : MonoBehaviour
 {
     public Powerup powerup;
     public AudioClip feedback;
+    public float feedbackVol;
     public GameObject pickupPrefab;
     public float spawnDelay;
     private float nextSpawnTime;
@@ -15,6 +16,7 @@ public class Pickup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ConvertPrefs();
         // Add to list on start
         GameManager.instance.PowerUps.Add(pickupPrefab);
         // Get transform of spawnPoint
@@ -62,12 +64,18 @@ public class Pickup : MonoBehaviour
                 // Play Feedback (if it is set)
                 if (feedback != null)
                 {
-                    AudioSource.PlayClipAtPoint(feedback, gameObject.GetComponent<Transform>().position, 1.0f);
+                    AudioSource.PlayClipAtPoint(feedback, gameObject.GetComponent<Transform>().position, feedbackVol);
                 }
 
                 // Destroy this pickup
                 Destroy(spawnedPickup);
             }
         }
+    }
+
+    public void ConvertPrefs()
+    {
+        feedbackVol = PlayerPrefs.GetInt("SFX Volume");
+        feedbackVol /= 10;
     }
 }

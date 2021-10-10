@@ -89,9 +89,15 @@ public class InputController : Controller
         }
     }
 
+    public ControlType setcontrolType()
+    {
+        return ControlType.IJKL;
+    }
+
     public void OnDestroy()
     {
         // Remove me from the list
         GameManager.instance.players.Remove(this);
+        GameManager.instance.Player1Lives -= 1;
     }
 }

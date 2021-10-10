@@ -20,18 +20,20 @@ public class MapGenerator : MonoBehaviour
     public int mapSeed;
     public bool isMapOfTheDay;
     public bool isRandomSeed;
+    public int mapChoice;
 
     // Use this for initialization
     void Start()
     {
+        mapChoice = PlayerPrefs.GetInt("Map Choice");
         // Keep Designer seed if neither is true.
 
         // Get map seed from date if isMapOfTheDay
-        if (isMapOfTheDay)
+        if (mapChoice == 1)
         {
             mapSeed = DateToInt(DateTime.Now.Date);
         }
-        else if (isRandomSeed)
+        else if (mapChoice == 0)
         {
             mapSeed = DateToInt(DateTime.Now);
         }
